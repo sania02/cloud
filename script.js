@@ -13,6 +13,15 @@ document.getElementById("inquiryForm").addEventListener("submit", function(event
         return;
     }
 
+ //    for the last links in footer
+document.querySelectorAll('.stay-connected a').forEach(link => {
+    link.addEventListener('click', function(event) {
+      // Ensure the link is clickable
+      window.open(link.href, '_blank');
+      event.preventDefault();
+    });
+  });
+
     // Display thank you message in the designated div
     const thankYouMessage = document.getElementById("thankYouMessage");
     thankYouMessage.textContent = `Thank you, ${name}! Your inquiry has been submitted successfully. We will get back to you soon.`;
