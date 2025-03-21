@@ -1,6 +1,12 @@
 document.getElementById("inquiryForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent the form from actually submitting
 
+// contact us is now clickable
+document.getElementById('contactBtn').addEventListener('click', function() {
+  const phoneNumber = '+919310740388'; // Replace with the official number
+  window.location.href = `tel:${phoneNumber}`;
+});
+
     // Collect form data
     const name = document.getElementById("name").value;
     const email = document.getElementById("email").value;
@@ -28,6 +34,23 @@ document.getElementById("inquiryForm").addEventListener("submit", function(event
         document.getElementById("inquiryForm").reset();
         thankYouMessage.textContent = ""; // Clear the message after reset
     }, 3000); // Delay of 3 seconds before clearing the form and message
+});
+     // facebook and links are clickable
+document.querySelectorAll('.stay-connected a').forEach(link => {
+  link.addEventListener('click', function(event) {
+    // Ensure the link is clickable
+    window.open(link.href, '_blank');
+    event.preventDefault();
+  });
+}); 
+
+// foco and fopo models container are clickable
+document.querySelector('.model-box').addEventListener('click', function() {
+  window.location.href = 'https://therollingplate.com/foco-model/';
+});
+
+document.querySelector('.fopo-model').addEventListener('click', function() {
+  window.location.href = 'https://therollingplate.com/fopo-model/';
 });
 
 
