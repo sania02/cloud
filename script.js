@@ -13,6 +13,14 @@ document.getElementById("inquiryForm").addEventListener("submit", function(event
         return;
     }
 
+    // for contact us redirect it on call 
+
+    document.getElementById('contactBtn').addEventListener('click', function() {
+        const phoneNumber = '+919310740388'; 
+        window.location.href = `tel:${phoneNumber}`;
+      });
+
+
  //    for the last links in footer
 document.querySelectorAll('.stay-connected a').forEach(link => {
     link.addEventListener('click', function(event) {
