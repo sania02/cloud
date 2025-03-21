@@ -47,8 +47,17 @@ document.querySelectorAll('.stay-connected a').forEach(link => {
     }, 3000); // Delay of 3 seconds before clearing the form and message
 });
 
+// foco and fopo models are clickable and redirect to official website 
 
-// Function to generate images dynamically
+  document.querySelector('.model-box').addEventListener('click', function() {
+    window.location.href = 'https://therollingplate.com/foco-model/';
+  });
+
+  document.querySelector('.fopo-model').addEventListener('click', function() {
+    window.location.href = 'https://therollingplate.com/fopo-model/';
+  });
+
+
 // Function to generate images dynamically
 function generateImages(rowId, start, end) {
     const row = document.getElementById(rowId);
