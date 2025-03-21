@@ -13,23 +13,6 @@ document.getElementById("inquiryForm").addEventListener("submit", function(event
         return;
     }
 
-    // for contact us redirect it on call 
-
-    document.getElementById('contactBtn').addEventListener('click', function() {
-        const phoneNumber = '+919310740388'; 
-        window.location.href = `tel:${phoneNumber}`;
-      });
-
-
- //    for the last links in footer
-document.querySelectorAll('.stay-connected a').forEach(link => {
-    link.addEventListener('click', function(event) {
-      // Ensure the link is clickable
-      window.open(link.href, '_blank');
-      event.preventDefault();
-    });
-  });
-
     // Display thank you message in the designated div
     const thankYouMessage = document.getElementById("thankYouMessage");
     thankYouMessage.textContent = `Thank you, ${name}! Your inquiry has been submitted successfully. We will get back to you soon.`;
@@ -47,17 +30,8 @@ document.querySelectorAll('.stay-connected a').forEach(link => {
     }, 3000); // Delay of 3 seconds before clearing the form and message
 });
 
-// foco and fopo models are clickable and redirect to official website 
 
-  document.querySelector('.model-box').addEventListener('click', function() {
-    window.location.href = 'https://therollingplate.com/foco-model/';
-  });
-
-  document.querySelector('.fopo-model').addEventListener('click', function() {
-    window.location.href = 'https://therollingplate.com/fopo-model/';
-  });
-
-
+// Function to generate images dynamically
 // Function to generate images dynamically
 function generateImages(rowId, start, end) {
     const row = document.getElementById(rowId);
