@@ -51,10 +51,15 @@ document.querySelectorAll('.stay-connected a').forEach(link => {
 document.querySelector('.model-box').addEventListener('click', function() {
   window.location.href = 'https://therollingplate.com/foco-model/';
 });
-
-document.querySelector('.fopo-model').addEventListener('click', function() {
-  window.location.href = 'https://therollingplate.com/fopo-model/';
-});
+// fopo model 
+document.querySelectorAll('.model-box').forEach(box => {
+    const heading = box.querySelector('.model-heading');
+    if (heading && heading.textContent.trim() === 'FOPO MODEL') {
+      box.addEventListener('click', function() {
+        window.location.href = 'https://therollingplate.com/fopo-model/';
+      });
+    }
+  });
 
 
 // Function to generate images dynamically
