@@ -1,11 +1,14 @@
-document.getElementById("inquiryForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the form from actually submitting
 
 // contact us is now clickable
 document.getElementById('contactBtn').addEventListener('click', function() {
   const phoneNumber = '+919310740388'; // Replace with the official number
   window.location.href = `tel:${phoneNumber}`;
 });
+
+
+document.getElementById("inquiryForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the form from actually submitting
+
 
     // Collect form data
     const name = document.getElementById("name").value;
